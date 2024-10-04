@@ -25,12 +25,12 @@ user/@yield('place')
 
 @section('content')
     <header>
-            <img src={{secure_asset('images/base/sub1.jpg')}} alt="さぶイチ公式ページ"></img>
+            <img src={{asset('images/base/sub1.jpg')}} alt="さぶイチ公式ページ"></img>
     </header>
     <main>
         @yield('main')
     </main>
     <footer>
-        
+
     </footer>
 @endsection

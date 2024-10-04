@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 $logcheck=0;
 if(isset($_SESSION['user_id'])){
@@ -7,7 +7,7 @@ if(isset($_SESSION['user_id'])){
     // if(dirname(__FILE__)!=="/home/c9019967/public_html/subscriptionmarket.jp"){
     // header("HTTP/1.1 301 Moved Permanently");header("Location:https://subscriptionmarket.jp");
     // }
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -15,13 +15,13 @@ if(isset($_SESSION['user_id'])){
         <meta charset="utf-8">
         <title>さぶイチ公式サイト|サブスクリプションマーケット</title>
         <meta name="description" content="さぶイチ公式サイト。さぶイチは、動画配信から特産品の取り寄せまで種々なサブスクリプションを紹介しています。また、サブスクリプションをまとめて整理するためのツールも用意しています。自分だけのサブすくカレンダーを作って、より快適にさぶイチを使いこなそう。">
-        <link rel="icon" href={{secure_asset('subichi.ico')}}>
+        <link rel="icon" href={{asset('subichi.ico')}}>
         <link rel="canonical" href="https://subscriptionmarket.jp/public">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="public/css/index.css">"
     </head>
     <body>
@@ -58,7 +58,7 @@ if(isset($_SESSION['user_id'])){
                             <div class="menu1"><img src="kago.png" alt="買い物かご"></div>
                             <div class="menu2 menu3"><h2>おすすめ</h2></div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="log">
@@ -236,9 +236,9 @@ if(isset($_SESSION['user_id'])){
                             </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <span class="arrow right"></span>
                 </div>
@@ -392,9 +392,9 @@ if(isset($_SESSION['user_id'])){
                             </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <span class="arrow right"></span>
                 </div>
@@ -548,9 +548,9 @@ if(isset($_SESSION['user_id'])){
                             </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <span class="arrow right"></span>
                 </div>
@@ -704,9 +704,9 @@ if(isset($_SESSION['user_id'])){
                             </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <span class="arrow right"></span>
                 </div>
@@ -860,9 +860,9 @@ if(isset($_SESSION['user_id'])){
                             </div>
                             </div>
                         </div>
-                        
-                        
-                        
+
+
+
                     </div>
                     <span class="arrow right"></span>
                 </div>
@@ -889,16 +889,16 @@ if(isset($_SESSION['user_id'])){
         <script>
             //ページ内リンクのずれをなおす
             $(function () {
-            var headerHight = 100; 
+            var headerHight = 100;
             $('a[href^=#]').click(function(){
                 var href= $(this).attr("href");
                 var target = $(href == "#" || href == "" ? 'html' : href);
-                    var position = target.offset().top-headerHight; 
+                    var position = target.offset().top-headerHight;
                 $("html, body").animate({scrollTop:position}, 550, "swing");
                     return false;
             });
             });
-        
+
             /*横スクロール*/
             document.querySelectorAll('.left').forEach(elm => {
                 elm.onclick = function () {
@@ -915,21 +915,21 @@ if(isset($_SESSION['user_id'])){
             /*ログイン前*/
             <?php if($logcheck==0):?>
             document.getElementById('provisional').addEventListener("click",()=>{
-               window.location="https://subscriptionmarket.jp/user/provisional"; 
+               window.location="https://subscriptionmarket.jp/user/provisional";
             });
             document.getElementById('login').addEventListener("click",()=>{
-               window.location="https://subscriptionmarket.jp/user/login"; 
+               window.location="https://subscriptionmarket.jp/user/login";
             });
             /*ログイン後*/
             <?php else:?>
             document.getElementById('mypage').addEventListener("click",()=>{
-               window.location="https://subscriptionmarket.jp/user/provisional"; 
+               window.location="https://subscriptionmarket.jp/user/provisional";
             });
             document.getElementById('logout').addEventListener("click",()=>{
-               window.location="https://subscriptionmarket.jp/user/logout"; 
+               window.location="https://subscriptionmarket.jp/user/logout";
             });
             <?php endif?>
         </script>
-        
+
     </body>
 </html>

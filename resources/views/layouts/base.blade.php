@@ -9,19 +9,19 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="robots" content="noindex,nofollow">
-        <link rel="icon" href={{secure_asset('subichi.ico')}}>
+        <link rel="icon" href={{asset('subichi.ico')}}>
         <link rel="canonical" href="https://subscriptionmarket.jp/@yield('name')">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" type="text/css" href={{mix('css/app.css')}}>
         @yield('css_file')
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        
+
         <meta property="og:title" content="さぶイチ公式｜@yield('title')" />
         <meta property="og:description" content="@yield('description')" />
         <!--website or article toppage::website other::article-->
         <meta property="og:type" content="@yield('og_type')" />
         <meta property="og:url" content="https://subscriptionmarket.jp/@yield('name')" />
-        <meta property="og:image" content={{secure_asset('images/base/sub00.png')}} />
+        <meta property="og:image" content={{asset('images/base/sub00.png')}} />
         <meta property="og:site_name" content="さぶイチ" />
         <meta property="og:locale" content="ja_JP"  />
         <meta name="twitter:card" content="summary">

@@ -16,12 +16,12 @@ const useStyles=makeStyles({
 });
 
 const Images  = [
-        { 
+        {
             img:'/images/subsc/amazon.jpg',
             title:'amzon',
             author:'author',
         },
-        {   
+        {
             img:'/images/subsc/desney.jpg',
             title:'amzon',
             author:'author',
@@ -31,12 +31,12 @@ const Images  = [
             title:'amzon',
             author:'author',
         },
-        { 
+        {
             img:'/images/subsc/amazon.jpg',
             title:'amzon',
             author:'author',
         },
-        {   
+        {
             img:'/images/subsc/desney.jpg',
             title:'amzon',
             author:'author',
@@ -77,7 +77,7 @@ export default function SimpleSlider() {
               }
             }
           ]
-        
+
     };
 
   return (
@@ -87,7 +87,7 @@ export default function SimpleSlider() {
         {Images.map((img,i)=>(
             <div className = {classes.parents} key={i}>
                 <img src={img.img} />
-            </div> 
+            </div>
         ))}
     </Slider>
     </>
